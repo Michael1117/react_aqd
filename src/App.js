@@ -24,17 +24,16 @@ class App extends React.Component {
     }
 
     render() {
-        return (
-            <div>
-                <h1>我是React，很高兴见到你！</h1>
-                <h3>JSX语法很好用哦！ </h3>
+        let arr = ["白板", "幺鸡", "二条", "三饼"];
 
-                <h3>JSX可以调用函数哦</h3>
-                {3 > 8 ? "A" : "B"}
-                {this.haha('篮球')}
-                <h3>JSX还可以设置样式！</h3>
-                <div style={{width: "100px",height: 20+30+"px", backgroundColor: "red"}}>
-                </div>
+        let arr2 = arr.map((item, index) => {
+            return <li key={index}>{item}</li>
+        });
+        return (
+
+            <div>
+                {/*{arr}*/}
+                {arr2}
             </div>
         )
     }
