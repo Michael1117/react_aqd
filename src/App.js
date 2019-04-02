@@ -2,38 +2,29 @@ import React from 'react';
 
 class App extends React.Component {
 
-    haha(lanmu) {
-        if (lanmu === '篮球') {
-            return (
-                <ul>
-                    <li>姚明</li>
-                    <li>乔丹</li>
-                    <li>科比</li>
-                    <li>奥尼尔</li>
-                </ul>
-            )
-        } else if (lanmu === '足球') {
-            return (
-                <ul>
-                    <li>李铁</li>
-                    <li>郝东海</li>
-                    <li>C罗</li>
-                </ul>
-            )
-        }
+    constructor(){
+        super();
+        this.a = 100
     }
 
+    add = () => {
+        this.a ++;
+        console.log('我是add')
+        console.log(this.a);
+    }
+    /*add() {
+        this.a++;
+        console.log(this.a);
+    }*/
     render() {
-        let arr = ["白板", "幺鸡", "二条", "三饼"];
 
-        let arr2 = arr.map((item, index) => {
-            return <li key={index}>{item}</li>
-        });
         return (
-
             <div>
-                {/*{arr}*/}
-                {arr2}
+                <p>我是add</p>
+                <p>{this.a}</p>
+                <p>
+                    <input type="button" value="按我" onClick={this.add}/>
+                </p>
             </div>
         )
     }
